@@ -22,22 +22,35 @@ class CourseModule(BaseModel):
     module_name: str = Field(description="课程模块名称")
     course_modules: List[Course] = Field(description="课程列表")
 
+class SpecificRequirement(BaseModel):
+    requirement_type: str = Field(description="具体要求条目，例如国际生的GPA，TOFEL，GRE，IELTS，PTE，SAT，IB，Duolingo，AP，新加坡本地的A-Level，O-Level，Polytechnic Diploma，SIM Diploma，SIM Management Foundation Studies (MFS)，International Baccalaureate (IB) Diploma，SIM Diploma，SIM Management Foundation Studies (MFS) or its equivalent")
+    grade: float = Field(description="具体分数，仅展示数字，例如 4.5，5.0，6.0，7.0，8.0，9.0，10.0")
+    requirement_description: str = Field(description="描述额外需求，例如不接受IELTS单项低于6.5，或者是否为必须项")
+
 class AdmissionRequirement(BaseModel):
-    requirement_type: str = Field(description="要求类型，如学术要求、语言要求等")
+    requirement_type: str = Field(description="要求类型，按照acdemic、english_language分两类")
     requirement_description: str = Field(description="描述额外需求")
-    specific_requirements: dict = Field(description="具体要求，例如{'TOEFL': '90', 'GPA': '3.0'}")
+    specific_requirements: List[SpecificRequirement] = Field(description="具体单项要求")
+
+class DomesticTotalFee(BaseModel):
+    fee_lower: float = Field(description="国内总学费下限")
+    fee_upper: float = Field(description="国内总学费上限")
+
+class InternationalTotalFee(BaseModel):
+    fee_lower: float = Field(description="国际总学费下限")
+    fee_upper: float = Field(description="国际总学费上限")
 
 class ProgramInfo(BaseModel):
-    program_name: str = Field(description="项目全名")
-    university: str = Field(description="项目合作大学/学院名称")
+    # program_name: str = Field(description="项目全名")
+    # university: str = Field(description="项目合作大学/学院名称")
     introduction: str = Field(description="项目简介")
-    academic_level: str = Field(description="学术级别，如本科、硕士等")
-    programme_type: str = Field(description="项目类型，如全日制4年制")
-    domestic_total_fee: Optional[str] = Field(description="国内总学费", default="")
-    international_total_fee: Optional[str] = Field(description="国际总学费", default="")
-    application_period: Optional[str] = Field(description="申请时间", default="")
-    course_modules: List[CourseModule] = Field(description="课程模块列表")
+    # academic_level: str = Field(description="学术级别，如本科、硕士等")
+    # programme_type: str = Field(description="项目类型，如全日制4年制")
+    domestic_total_fee: DomesticTotalFee = Field(description="国内总学费，如果没有范围，则fee_lower和fee_upper相同")
+    international_total_fee: InternationalTotalFee = Field(description="国际总学费，如果没有范围，则fee_lower和fee_upper相同")
+    # application_period: Optional[str] = Field(description="申请时间", default="")
     admission_requirements: Dict[str, List[AdmissionRequirement]] = Field(description="录取要求，按国际生、国内生分两类，每个类别下包含具体的要求")
+    course_modules: List[CourseModule] = Field(description="课程模块列表")
 
 class ProgramCrawler:
     MAX_REFINEMENT_ATTEMPTS = 3 # Maximum correction attempts
@@ -116,12 +129,12 @@ class ProgramCrawler:
             print(f"HTML成功转换为Markdown，长度: {len(markdown_content)} 字符")
             
             # 将转换后的Markdown写入文件以供检查
-            try:
-                with open("cleaned_output.md", "w", encoding="utf-8") as f:
-                    f.write(markdown_content)
-                print("清理后的Markdown已保存到 cleaned_output.md 文件。")
-            except Exception as e:
-                print(f"保存清理后的Markdown到文件时出错: {e}")
+            # try:
+            #     with open("cleaned_output.md", "w", encoding="utf-8") as f:
+            #         f.write(markdown_content)
+            #     print("清理后的Markdown已保存到 cleaned_output.md 文件。")
+            # except Exception as e:
+            #     print(f"保存清理后的Markdown到文件时出错: {e}")
                 
             return markdown_content
         except Exception as e:
@@ -153,10 +166,10 @@ class ProgramCrawler:
         try:
             # 打印系统时间
             print(f"当前系统时间: {datetime.datetime.now()}")
-            print(f"发送请求到 DeepSeek API ({messages[-1]['role']}...) Timeout: {180 if max_tokens > 1000 else 60}")
+            print(f"发送请求到 DeepSeek API ({messages[-1]['role']}...) Timeout: {600 if max_tokens > 1000 else 60}")
             session = await self.get_aiohttp_session()
             # 根据max_tokens调整超时
-            timeout = 180 if max_tokens > 1000 else 60
+            timeout = 600 if max_tokens > 1000 else 60
             async with session.post(api_endpoint, headers=headers, json=payload, timeout=timeout) as response:
                 response_data = await response.json()
                 if response.status == 200:
@@ -255,7 +268,7 @@ class ProgramCrawler:
             1. Compare the information in the provided JSON object with the information present in the Markdown text.
             2. Assess if the JSON object accurately, completely, and logically represents the key information *as defined by the Target JSON Schema*, based on the Markdown text. Fields not defined in the schema should be ignored for validation.
             3. **Verify that the JSON object's hierarchy and format strictly adhere to the Target JSON Schema.**
-            4. Output ONLY "True" or "False" as the very first word on the first line, indicating whether the JSON is a valid, logical, and correctly formatted extraction *according to the schema*.
+            4. Output ONLY "True" or "False" as the very first word on the first line, indicating whether the JSON is a valid, logical, and correctly formatted extraction without duplications *according to the schema*.
             5. On the next line, provide a brief, one-sentence reason for your assessment.
             6. **IMPORTANT: If the first line is "False", output the corrected JSON object (adhering to the schema's content, hierarchy, and format) starting from the third line.** Use the provided Markdown to make corrections only for the fields defined in the schema.
 
@@ -333,8 +346,15 @@ class ProgramCrawler:
                 return {"error": f"Invalid validation response format (Attempt {attempt + 1})", "reason": validation_reason, "last_json": current_json, "raw_response": validation_content}
                 
         # 如果循环结束仍未验证通过
-        print(f"已达到最大修正次数 ({self.MAX_REFINEMENT_ATTEMPTS})，验证仍未通过。")
-        return {"error": f"Validation failed after {self.MAX_REFINEMENT_ATTEMPTS} attempts", "reason": validation_reason, "last_json": current_json}
+        print(f"已达到最大修正次数 ({self.MAX_REFINEMENT_ATTEMPTS})，验证仍未通过。将使用最后一次获取的JSON。")
+        # 在返回前添加警告信息
+        if isinstance(current_json, dict): # 确保 current_json 是字典
+            warning_message = f"Validation failed after {self.MAX_REFINEMENT_ATTEMPTS} attempts. Last reason: {validation_reason}"
+            current_json['warning'] = warning_message
+            print(f"记录警告信息: {warning_message}")
+        else:
+            print("警告：current_json 不是字典，无法添加警告信息。")
+        return current_json # 返回最后一次尝试的JSON (可能带有警告)
 
     async def close(self):
         """关闭请求会话"""
@@ -351,7 +371,9 @@ async def main():
     # 示例用法
     url = "https://www.sim.edu.sg/degrees-diplomas/programmes/programme-listing/bachelor-of-arts-communication-and-psychology"
     base_url = "https://api.deepseek.com"
+    # base_url = "https://api.siliconflow.cn/v1"
     api_key = "sk-768de9d58b864f7cb54882fc66780bfc"
+    # api_key = "sk-barzwkcaoudfpxxztzzzbdggjzksvlwjzgfbwvdeozgcutxv"
     
     crawler = ProgramCrawler(url, base_url, api_key)
     try:

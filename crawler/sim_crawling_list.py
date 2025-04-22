@@ -8,8 +8,9 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import requests
 import asyncio
-from ProgramCrawler import ProgramCrawler
+from crawling_single_program_detail import ProgramCrawler
 import json
+import pandas as pd
 
 # 解析单个 listing-card，和你原来代码相同
 def parse_listing_card(card):
@@ -46,9 +47,6 @@ def parse_listing_card(card):
         brief_data['program_name'] = ''
         temp_program_url = ''
 
-    # 5) 简短描述
-    desc_tag = card.select_one('.slc-content-detail.type-desc')
-    brief_data['short_desc'] = desc_tag.get_text(strip=True) if desc_tag else ''
 
     # 6) 学术等级、课程类型、申请日期、学费等
     info_blocks = card.select('.slc-info-block')
@@ -65,110 +63,15 @@ def parse_listing_card(card):
             elif label == 'Application Dates':
                 brief_data['application_dates'] = value
             elif 'Estimated Fees' in label:
-                brief_data['fees'] = value
+                brief_data['fee_range'] = value
     # 默认值
     brief_data.setdefault('academic_level', '')
     brief_data.setdefault('programme_type', '')
     brief_data.setdefault('application_dates', '')
-    brief_data.setdefault('fees', '')
-    try:
-        brief_data.update(crawl_program_details(temp_program_url))
-    except Exception as e:
-        print(f"获取详细信息失败: {temp_program_url}, 错误: {e}")
-        brief_data.update({
-            'program_outline': '',
-            'intake_list': '',
-            'curriculum_modules': '',
-            'admission_criteria': ''
-        })
+    brief_data.setdefault('fee_range', '')
 
     return brief_data
 
-def crawl_program_details(url, crawler_instance=None):
-    """
-    使用ProgramCrawler获取项目详细信息，并将结果立即写入JSON文件
-    """
-    try:
-        # 处理相对URL
-        if url.startswith('/'):
-            url = f"https://www.sim.edu.sg{url}"
-        elif url and not url.startswith(('http://', 'https://')):
-            url = f"https://www.sim.edu.sg/{url}"
-        
-        # 设置API配置
-        base_url = "https://api.deepseek.com"
-        api_key = "sk-768de9d58b864f7cb54882fc66780bfc"
-        
-        # 创建或使用现有的爬虫实例
-        need_to_close = False
-        if crawler_instance is None:
-            crawler = ProgramCrawler(url, base_url, api_key)
-            need_to_close = True
-        else:
-            crawler = crawler_instance
-            # 更新URL
-            crawler.url = url
-        
-        try:
-            # 获取数据
-            result = asyncio.run(crawler.crawl())
-            
-            # 如果爬取成功，立即写入文件
-            if isinstance(result, dict) and "error" not in result:
-                # 读取现有的JSON文件
-                try:
-                    with open("SIM_programs.json", "r", encoding="utf-8") as f:
-                        existing_data = json.load(f)
-                except (FileNotFoundError, json.JSONDecodeError):
-                    existing_data = []
-                
-                # 确保existing_data是列表
-                if not isinstance(existing_data, list):
-                    existing_data = []
-                
-                # 添加新的数据
-                existing_data.append(result)
-                
-                # 立即写入更新后的数据
-                with open("SIM_programs.json", "w", encoding="utf-8") as f:
-                    json.dump(existing_data, f, ensure_ascii=False, indent=2)
-                
-                print(f"成功将数据写入SIM_programs.json，当前共有{len(existing_data)}条记录")
-                return result
-            else:
-                print(f"爬取失败: {result.get('error', '未知错误')}")
-                return {
-                    'program_outline': '',
-                    'intake_list': '',
-                    'curriculum_modules': '',
-                    'admission_criteria': ''
-                }
-                
-        except Exception as e:
-            print(f"爬取过程中出错: {e}")
-            return {
-                'program_outline': '',
-                'intake_list': '',
-                'curriculum_modules': '',
-                'admission_criteria': ''
-            }
-        finally:
-            # 如果是新创建的爬虫实例，则需要关闭
-            if need_to_close:
-                try:
-                    # 使用 asyncio.run() 来执行异步的 close 方法
-                    asyncio.run(crawler.close())
-                except Exception as e:
-                    print(f"关闭爬虫实例时出错: {e}")
-            
-    except Exception as e:
-        print(f"爬取项目详情时出错: {e}")
-        return {
-            'program_outline': '',
-            'intake_list': '',
-            'curriculum_modules': '',
-            'admission_criteria': ''
-        }
 
 def selenium_crawl_listing(driver):
     """
@@ -343,7 +246,7 @@ def crawl_by_disciplines():
     return final_data
 
 
-def write_csv(data, filename="sim_programmes_disciplines.csv"):
+def write_csv(data, filename="sim_program_listing.csv"):
     """
     写入 CSV，前面多加 discipline, sub_discipline 两列
     其余字段可根据 parse_listing_cards 的输出决定
@@ -366,11 +269,20 @@ def write_csv(data, filename="sim_programmes_disciplines.csv"):
 
 if __name__ == "__main__":
     # 定义默认输出文件名
-    output_file = "sim_programmes_disciplines.csv"
+    output_file = "sim_program_listing.csv"
     
     
     # 继续执行爬虫
     print("开始爬取数据...")
     final_data = crawl_by_disciplines()
     print(f"Total records scraped: {len(final_data)}")
-    # write_csv(final_data, output_file)
+    
+    # 使用pandas去除完全相同的行
+    df = pd.DataFrame(final_data)
+    original_rows = len(df)
+    df = df.drop_duplicates()
+    duplicate_rows = original_rows - len(df)
+    print(f"移除了 {duplicate_rows} 行完全重复的数据")
+    final_data = df.to_dict('records')
+    
+    write_csv(final_data, output_file)

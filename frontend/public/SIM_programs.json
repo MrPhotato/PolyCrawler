@@ -1,0 +1,773 @@
+[
+  {
+    "data_id": 3551,
+    "program_name": "Bachelor of Arts (Communication and International Trade)",
+    "university": "University at Buffalo",
+    "discipline": "Arts & Social Sciences",
+    "sub_discipline": "Communication",
+    "tags": "Double Major",
+    "academic_level": "Bachelor's Degree, double major",
+    "programme_type": "Full-time, 4 years",
+    "application_dates": "Now till 14 April 2025 (May (Summer) 2025 intake) | Now till 30 June 2025 (August (Fall) 2025 intake)",
+    "fee_range": "S$60,887.40 - S$84,496.80 (Singaporean & PR) / S$67,296.60 - S$93,391.20 (International student)",
+    "program_link": "https://www.sim.edu.sg/degrees-diplomas/programmes/programme-listing/bachelor-of-arts-communication-and-international-trade",
+    "introduction": "Awarded and developed by: University at Buffalo, The State University of New York, US\n\nLearn insights and skills in the art and process of inter-personal communication with an international focus.\nFounded in 1964 and ranked among the top 25 communication programs in the US, UB’s BA (Communication) provides you with a comprehensive knowledge of human communication, its media, and its effects.\nLearn the insights and skills in the art and process of global restructuring and new patterns of uneven development.\nThe international trade program aims to prepare students to critically assess the process of globalization operating in the world today. Critical social, economic, and environmental challenges are being faced by corporate or government policy makers and organizations.\n* The SIM-UB scholarship allows deserving students at SIM to spend one semester at the UB’s New York campus.",
+    "domestic_total_fee": {
+      "fee_lower": 60887.4,
+      "fee_upper": 84496.8
+    },
+    "international_total_fee": {
+      "fee_lower": 67296.6,
+      "fee_upper": 93391.2
+    },
+    "admission_requirements": {
+      "international": [
+        {
+          "requirement_type": "english_language",
+          "requirement_description": "All other applicants must demonstrate proficiency in English in one of the following ways. Only scores from tests taken within 2 years prior to the time of enrolment are acceptable.",
+          "specific_requirements": [
+            {
+              "requirement_type": "Paper-based TOEFL",
+              "grade": 550,
+              "requirement_description": ""
+            },
+            {
+              "requirement_type": "Internet-based TOEFL (IBT)",
+              "grade": 79,
+              "requirement_description": ""
+            },
+            {
+              "requirement_type": "IELTS",
+              "grade": 6.5,
+              "requirement_description": ""
+            },
+            {
+              "requirement_type": "PTE Academic",
+              "grade": 55,
+              "requirement_description": ""
+            },
+            {
+              "requirement_type": "SAT 1 ERWS",
+              "grade": 550,
+              "requirement_description": ""
+            },
+            {
+              "requirement_type": "ACT (English and reading sections)",
+              "grade": 20,
+              "requirement_description": ""
+            },
+            {
+              "requirement_type": "International Baccalaureate (IB) – Diploma Higher Level English A1 or A2",
+              "grade": 4,
+              "requirement_description": ""
+            },
+            {
+              "requirement_type": "Duolingo (DET)",
+              "grade": 120,
+              "requirement_description": ""
+            }
+          ]
+        }
+      ],
+      "domestic": [
+        {
+          "requirement_type": "academic",
+          "requirement_description": "Singapore Citizens and Permanent Residents with at least 10 years primary and secondary education in Singapore in an English-medium government school, and completed their GCE ‘O’ level with a grade ‘C’ (6 or better) in the English Language, are exempted from the English Language proficiency requirement.",
+          "specific_requirements": []
+        }
+      ]
+    },
+    "course_modules": [
+      {
+        "module_name": "Prerequisite Modules for Communication",
+        "course_modules": [
+          {
+            "course_name": "COM 101 Principles of Communication",
+            "course_description": "3 credits"
+          },
+          {
+            "course_name": "COM 217 Communication in Organizations",
+            "course_description": "3 credits"
+          },
+          {
+            "course_name": "COM 225 Interpersonal Communication",
+            "course_description": "3 credits"
+          },
+          {
+            "course_name": "COM 240 Introduction to Mass Communication",
+            "course_description": "3 credits"
+          },
+          {
+            "course_name": "COM 337 Communication Theory",
+            "course_description": "3 credits"
+          },
+          {
+            "course_name": "CSE 111 Introduction to Quantitative Analysis and Reasoning with Computing",
+            "course_description": "4 credits"
+          },
+          {
+            "course_name": "MGQ 201 Introduction to Statistics for Analytics",
+            "course_description": "4 credits"
+          }
+        ]
+      },
+      {
+        "module_name": "Required Modules for Communication",
+        "course_modules": [
+          {
+            "course_name": "LIN 207 Language, Society and The Individual",
+            "course_description": "3 credits"
+          },
+          {
+            "course_name": "COM 205 Research Methods",
+            "course_description": "3 credits"
+          },
+          {
+            "course_name": "SOC 293 Social Research Methods",
+            "course_description": "3 credits"
+          },
+          {
+            "course_name": "COM 300 Written Communication",
+            "course_description": "3 credits"
+          },
+          {
+            "course_name": "PSY 101 Introductory Psychology",
+            "course_description": "3 credits"
+          },
+          {
+            "course_name": "PSY 331 Social Psychology",
+            "course_description": "3 credits"
+          },
+          {
+            "course_name": "PSY 333 Industrial/Organizational Psychology",
+            "course_description": "3 credits"
+          },
+          {
+            "course_name": "PSY 341 Cognitive Psychology",
+            "course_description": "3 credits"
+          },
+          {
+            "course_name": "PSY 342 Introduction to Cognitive Science: Concepts of the Mind",
+            "course_description": "3 credits"
+          },
+          {
+            "course_name": "SOC 371 Individual And Society",
+            "course_description": "3 credits"
+          },
+          {
+            "course_name": "SOC 101 Introduction to Sociology",
+            "course_description": "3 credits"
+          }
+        ]
+      },
+      {
+        "module_name": "Prerequisite Modules for International Trade",
+        "course_modules": [
+          {
+            "course_name": "Any two Geography or Management modules",
+            "course_description": ""
+          }
+        ]
+      },
+      {
+        "module_name": "Required Modules for International Trade",
+        "course_modules": [
+          {
+            "course_name": "ECO 181 Introduction to Macroeconomics",
+            "course_description": "4 credits"
+          },
+          {
+            "course_name": "ECO 182 Introduction to Microeconomics",
+            "course_description": "4 credits"
+          },
+          {
+            "course_name": "GEO 100 World Regions & Issues",
+            "course_description": "3 credits"
+          },
+          {
+            "course_name": "GEO 103 Global Economic Geographies",
+            "course_description": "3 credits"
+          },
+          {
+            "course_name": "GEO 120 Maps: Earth from Above",
+            "course_description": "3 credits"
+          },
+          {
+            "course_name": "GEO 211 Univariate Statistics in Geography",
+            "course_description": "4 credits"
+          },
+          {
+            "course_name": "GEO 330 Dynamics of International Business",
+            "course_description": "3 credits"
+          },
+          {
+            "course_name": "GEO 333 International Trade",
+            "course_description": "3 credits"
+          },
+          {
+            "course_name": "GEO 334 International Business Cultures",
+            "course_description": "3 credits"
+          },
+          {
+            "course_name": "GEO 425 Industrial / Business Geography",
+            "course_description": "3 credits"
+          },
+          {
+            "course_name": "GEO 460 Geography of Development",
+            "course_description": "3 credits"
+          },
+          {
+            "course_name": "MGQ 201 Introduction to Statistics for Analytics",
+            "course_description": "4 credits"
+          }
+        ]
+      },
+      {
+        "module_name": "UB Curriculum",
+        "course_modules": [
+          {
+            "course_name": "UB Seminar",
+            "course_description": "3 credits"
+          },
+          {
+            "course_name": "Foundations",
+            "course_description": "21 credits"
+          },
+          {
+            "course_name": "Pathways",
+            "course_description": "18 – 19 credits"
+          },
+          {
+            "course_name": "UBC 399 UB Curriculum Capstone",
+            "course_description": "1 credit"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data_id": 3602,
+    "program_name": "Bachelor of Arts (Communication and Psychology)",
+    "university": "University at Buffalo",
+    "discipline": "Arts & Social Sciences",
+    "sub_discipline": "Communication",
+    "tags": "Double Major",
+    "academic_level": "Bachelor's Degree, double major",
+    "programme_type": "Full-time, 4 years",
+    "application_dates": "Now till 14 April 2025 (May (Summer) 2025 intake) | Now till 30 June 2025 (August (Fall) 2025 intake)",
+    "fee_range": "S$60,887.40 - S$84,496.80 (Singaporean & PR) / S$67,296.60 - S$93,391.20 (International student)",
+    "program_link": "https://www.sim.edu.sg/degrees-diplomas/programmes/programme-listing/bachelor-of-arts-communication-and-psychology",
+    "introduction": "Awarded and developed by: University at Buffalo, The State University of New York, US\n\nLearn insights and skills in the art and process of inter-personal communication with an international focus.\nFounded in 1964 and ranked among the top 25 communication programs in the US, UB’s BA (Communication) provides you with a comprehensive knowledge of human communication, its media, and its effects.\nYou will learn insights and skills in the mind and behavior of human beings which is invaluable in promoting effective interactions and relationships with people.\nFounded in 1920’s, Psychology is one of the largest undergraduate majors in UB. The department of Psychology in UB is a member of the American Psychological Society and is ranked among the top 50 (US News, 2012 ranking) in the US.\n  * The SIM-UB scholarship allows deserving students at SIM to spend one semester at the UB’s New York campus.",
+    "domestic_total_fee": {
+      "fee_lower": 60887.4,
+      "fee_upper": 84496.8
+    },
+    "international_total_fee": {
+      "fee_lower": 67296.6,
+      "fee_upper": 93391.2
+    },
+    "admission_requirements": {
+      "international": [
+        {
+          "requirement_type": "english_language",
+          "requirement_description": "All other applicants must demonstrate proficiency in English in one of the following ways. Only scores from tests taken within 2 years prior to the time of enrolment are acceptable.",
+          "specific_requirements": [
+            {
+              "requirement_type": "Paper-based TOEFL",
+              "grade": 550,
+              "requirement_description": "Minimum score"
+            },
+            {
+              "requirement_type": "Internet-based TOEFL (IBT)",
+              "grade": 79,
+              "requirement_description": "Minimum score"
+            },
+            {
+              "requirement_type": "IELTS",
+              "grade": 6.5,
+              "requirement_description": "Minimum score"
+            },
+            {
+              "requirement_type": "PTE Academic",
+              "grade": 55,
+              "requirement_description": "Minimum score"
+            },
+            {
+              "requirement_type": "SAT 1 ERWS",
+              "grade": 550,
+              "requirement_description": "Minimum score"
+            },
+            {
+              "requirement_type": "ACT (English and reading sections)",
+              "grade": 20,
+              "requirement_description": "Minimum score"
+            },
+            {
+              "requirement_type": "International Baccalaureate (IB) – Diploma Higher Level English A1 or A2",
+              "grade": 4,
+              "requirement_description": "Minimum score"
+            },
+            {
+              "requirement_type": "Duolingo (DET)",
+              "grade": 120,
+              "requirement_description": "Minimum score"
+            }
+          ]
+        }
+      ],
+      "domestic": [
+        {
+          "requirement_type": "academic",
+          "requirement_description": "Singapore Citizens and Permanent Residents with at least 10 years primary and secondary education in Singapore in an English-medium government school, and completed their GCE ‘O’ level with a grade ‘C’ (6 or better) in the English Language, are exempted from the English Language proficiency requirement.",
+          "specific_requirements": []
+        }
+      ]
+    },
+    "course_modules": [
+      {
+        "module_name": "Prerequisite Modules for Communication",
+        "course_modules": [
+          {
+            "course_name": "COM 101 Principles of Communication",
+            "course_description": "3 credits"
+          },
+          {
+            "course_name": "COM 217 Communication in Organizations",
+            "course_description": "3 credits"
+          },
+          {
+            "course_name": "COM 225 Interpersonal Communication",
+            "course_description": "3 credits"
+          },
+          {
+            "course_name": "COM 240 Introduction to Mass Communication",
+            "course_description": "3 credits"
+          },
+          {
+            "course_name": "COM 337 Communication Theory",
+            "course_description": "3 credits"
+          },
+          {
+            "course_name": "CSE 111 Introduction to Quantitative Analysis and Reasoning with Computing",
+            "course_description": "4 credits"
+          },
+          {
+            "course_name": "PSY 207 Psychological Statistics",
+            "course_description": "4 credits"
+          }
+        ]
+      },
+      {
+        "module_name": "Required Modules for Communication",
+        "course_modules": [
+          {
+            "course_name": "LIN 207 Language, Society and The Individual",
+            "course_description": "3 credits"
+          },
+          {
+            "course_name": "COM 300 Written Communication",
+            "course_description": "3 credits"
+          },
+          {
+            "course_name": "PSY 101 Introductory Psychology",
+            "course_description": "3 credits"
+          },
+          {
+            "course_name": "PSY 350 Scientific Inquiry in Psychology",
+            "course_description": "3 credits"
+          },
+          {
+            "course_name": "PSY 331 Social Psychology",
+            "course_description": "3 credits"
+          },
+          {
+            "course_name": "PSY 333 Industrial/Organizational Psychology",
+            "course_description": "3 credits"
+          },
+          {
+            "course_name": "PSY 341 Cognitive Psychology",
+            "course_description": "3 credits"
+          },
+          {
+            "course_name": "PSY 342 Introduction to Cognitive Science: Concepts of the Mind",
+            "course_description": "3 credits"
+          },
+          {
+            "course_name": "SOC 371 Individual And Society",
+            "course_description": "3 credits"
+          },
+          {
+            "course_name": "SOC 101 Introduction to Sociology",
+            "course_description": "3 credits"
+          }
+        ]
+      },
+      {
+        "module_name": "Prerequisite Modules for Psychology",
+        "course_modules": [
+          {
+            "course_name": "MTH 113 Precalculus without Trigonometry",
+            "course_description": "4 credits"
+          },
+          {
+            "course_name": "SOC 294 Basic Statistics for Social Sciences",
+            "course_description": "4 credits"
+          },
+          {
+            "course_name": "PSY 101 Introductory Psychology",
+            "course_description": "3 credits"
+          },
+          {
+            "course_name": "PSY 207 Psychological Statistics",
+            "course_description": "4 credits"
+          },
+          {
+            "course_name": "PSY 350 Scientific Inquiry in Psychology",
+            "course_description": "3 credits"
+          }
+        ]
+      },
+      {
+        "module_name": "Required Modules for Psychology",
+        "course_modules": [
+          {
+            "course_name": "300-level Course 1-Clinical",
+            "course_description": "3 credits"
+          },
+          {
+            "course_name": "300-level course 2-Social",
+            "course_description": "3 credits"
+          },
+          {
+            "course_name": "300-level Course 3-Cognitive",
+            "course_description": "3 credits"
+          },
+          {
+            "course_name": "300-level Course 4 – Behavioral Neuroscience",
+            "course_description": "3 credits"
+          }
+        ]
+      },
+      {
+        "module_name": "UB Curriculum",
+        "course_modules": [
+          {
+            "course_name": "UB Seminar",
+            "course_description": "3 credits"
+          },
+          {
+            "course_name": "Foundations",
+            "course_description": "21 credits"
+          },
+          {
+            "course_name": "Pathways",
+            "course_description": "18 – 19 credits"
+          },
+          {
+            "course_name": "UBC 399 UB Curriculum Capstone",
+            "course_description": "1 credit"
+          }
+        ]
+      },
+      {
+        "module_name": "Free Electives",
+        "course_modules": [
+          {
+            "course_name": "6 credits",
+            "course_description": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data_id": 3653,
+    "program_name": "Bachelor of Arts (Communication and Sociology)",
+    "university": "University at Buffalo",
+    "discipline": "Arts & Social Sciences",
+    "sub_discipline": "Communication",
+    "tags": "Double Major",
+    "academic_level": "Bachelor's Degree, double major",
+    "programme_type": "Full-time, 4 years",
+    "application_dates": "Now till 14 April 2025 (May (Summer) 2025 intake) | Now till 30 June 2025 (August (Fall) 2025 intake)",
+    "fee_range": "S$60,887.40 - S$84,496.80 (Singaporean & PR) / S$67,296.60 - S$93,391.20 (International student)",
+    "program_link": "https://www.sim.edu.sg/degrees-diplomas/programmes/programme-listing/bachelor-of-arts-communication-and-sociology",
+    "introduction": "Awarded and developed by: University at Buffalo, The State University of New York, US\n\nLearn insights and skills in the art and process of inter-personal communication with an international focus.\nFounded in 1964 and ranked among the top 25 communication programs in the US, UB’s BA (Communication) provides you with a comprehensive knowledge of human communication, its media, and its effects.\nYou will learn insights and skills in the art and process of the dynamic social systems and issues related to each other and societal issues.\nDepartment of Sociology in UB is a member of the American Sociological Society and the undergraduate Sociology program was founded in 1920. Sociology is a study of all people, for all people.\nSociology is the broadest of the social sciences and can give us an understanding of the social world. This program provides students with the technical and analytic tools, critical thinking skills, and global perspective needed to navigate the 21st century successfully and succeed in many careers.",
+    "domestic_total_fee": {
+      "fee_lower": 60887.4,
+      "fee_upper": 84496.8
+    },
+    "international_total_fee": {
+      "fee_lower": 67296.6,
+      "fee_upper": 93391.2
+    },
+    "admission_requirements": {
+      "international": [
+        {
+          "requirement_type": "english_language",
+          "requirement_description": "All other applicants must demonstrate proficiency in English in one of the following ways. Only scores from tests taken within 2 years prior to the time of enrolment are acceptable.",
+          "specific_requirements": [
+            {
+              "requirement_type": "TOEFL",
+              "grade": 550,
+              "requirement_description": "Paper-based TOEFL"
+            },
+            {
+              "requirement_type": "TOEFL",
+              "grade": 79,
+              "requirement_description": "Internet-based TOEFL (IBT)"
+            },
+            {
+              "requirement_type": "IELTS",
+              "grade": 6.5,
+              "requirement_description": "IELTS"
+            },
+            {
+              "requirement_type": "PTE",
+              "grade": 55,
+              "requirement_description": "PTE Academic"
+            },
+            {
+              "requirement_type": "SAT",
+              "grade": 550,
+              "requirement_description": "SAT 1 ERWS"
+            },
+            {
+              "requirement_type": "ACT",
+              "grade": 20,
+              "requirement_description": "ACT (English and reading sections)"
+            },
+            {
+              "requirement_type": "IB",
+              "grade": 4,
+              "requirement_description": "International Baccalaureate (IB) – Diploma Higher Level English A1 or A2"
+            },
+            {
+              "requirement_type": "Duolingo",
+              "grade": 120,
+              "requirement_description": "Duolingo (DET)"
+            }
+          ]
+        },
+        {
+          "requirement_type": "academic",
+          "requirement_description": "The following qualifications are accepted:",
+          "specific_requirements": [
+            {
+              "requirement_type": "A-Level",
+              "grade": 0,
+              "requirement_description": "Singapore-Cambridge General Certificate of Education Advanced Level (A-Level)"
+            },
+            {
+              "requirement_type": "Polytechnic Diploma",
+              "grade": 0,
+              "requirement_description": "Polytechnic Diploma"
+            },
+            {
+              "requirement_type": "SIM Diploma",
+              "grade": 0,
+              "requirement_description": "SIM Diploma"
+            },
+            {
+              "requirement_type": "IB",
+              "grade": 4.5,
+              "requirement_description": "International Baccalaureate (IB) Diploma: Most recent 3 years of high school grade of ‘B’ equivalent to IB score 4.5. IB Diploma holders can expect up to 30 credit exemptions with a minimum of 30 total scores."
+            },
+            {
+              "requirement_type": "MFS",
+              "grade": 0,
+              "requirement_description": "SIM Management Foundation Studies (MFS) or its equivalent"
+            },
+            {
+              "requirement_type": "High School Diploma",
+              "grade": 0,
+              "requirement_description": "Qualifications equivalent to a U.S. high school diploma. Average grade of ‘B’ or better."
+            }
+          ]
+        }
+      ],
+      "domestic": [
+        {
+          "requirement_type": "english_language",
+          "requirement_description": "Singapore Citizens and Permanent Residents with at least 10 years primary and secondary education in Singapore in an English-medium government school, and completed their GCE ‘O’ level with a grade ‘C’ (6 or better) in the English Language, are exempted from the English Language proficiency requirement.",
+          "specific_requirements": []
+        },
+        {
+          "requirement_type": "academic",
+          "requirement_description": "The following qualifications are accepted:",
+          "specific_requirements": [
+            {
+              "requirement_type": "A-Level",
+              "grade": 0,
+              "requirement_description": "Singapore-Cambridge General Certificate of Education Advanced Level (A-Level)"
+            },
+            {
+              "requirement_type": "Polytechnic Diploma",
+              "grade": 0,
+              "requirement_description": "Polytechnic Diploma"
+            },
+            {
+              "requirement_type": "SIM Diploma",
+              "grade": 0,
+              "requirement_description": "SIM Diploma"
+            },
+            {
+              "requirement_type": "IB",
+              "grade": 4.5,
+              "requirement_description": "International Baccalaureate (IB) Diploma: Most recent 3 years of high school grade of ‘B’ equivalent to IB score 4.5. IB Diploma holders can expect up to 30 credit exemptions with a minimum of 30 total scores."
+            },
+            {
+              "requirement_type": "MFS",
+              "grade": 0,
+              "requirement_description": "SIM Management Foundation Studies (MFS) or its equivalent"
+            },
+            {
+              "requirement_type": "High School Diploma",
+              "grade": 0,
+              "requirement_description": "Qualifications equivalent to a U.S. high school diploma. Average grade of ‘B’ or better."
+            }
+          ]
+        }
+      ]
+    },
+    "course_modules": [
+      {
+        "module_name": "Prerequisite Modules for Communication",
+        "course_modules": [
+          {
+            "course_name": "COM 101 Principles of Communication",
+            "course_description": "3 credits"
+          },
+          {
+            "course_name": "COM 217 Communication in Organizations",
+            "course_description": "3 credits"
+          },
+          {
+            "course_name": "COM 225 Interpersonal Communication",
+            "course_description": "3 credits"
+          },
+          {
+            "course_name": "COM 240 Introduction to Mass Communication",
+            "course_description": "3 credits"
+          },
+          {
+            "course_name": "COM 337 Communication Theory",
+            "course_description": "3 credits"
+          },
+          {
+            "course_name": "CSE 111 Introduction to Quantitative Analysis and Reasoning with Computing",
+            "course_description": "4 credits"
+          },
+          {
+            "course_name": "SOC 294 Basic Statistics for Social Sciences",
+            "course_description": "4 credits"
+          }
+        ]
+      },
+      {
+        "module_name": "Required Modules for Communication",
+        "course_modules": [
+          {
+            "course_name": "LIN 207 Language, Society and The Individual",
+            "course_description": "3 credits"
+          },
+          {
+            "course_name": "SOC 293 Social Research Methods",
+            "course_description": "3 credits"
+          },
+          {
+            "course_name": "COM 300 Written Communication",
+            "course_description": "3 credits"
+          },
+          {
+            "course_name": "PSY 101 Introductory Psychology",
+            "course_description": "3 credits"
+          },
+          {
+            "course_name": "PSY 331 Social Psychology",
+            "course_description": "3 credits"
+          },
+          {
+            "course_name": "PSY 333 Industrial/Organizational Psychology",
+            "course_description": "3 credits"
+          },
+          {
+            "course_name": "PSY 341 Cognitive Psychology",
+            "course_description": "3 credits"
+          },
+          {
+            "course_name": "PSY 342 Introduction to Cognitive Science: Concepts of the Mind",
+            "course_description": "3 credits"
+          },
+          {
+            "course_name": "SOC 371 Individual And Society",
+            "course_description": "3 credits"
+          },
+          {
+            "course_name": "SOC 101 Introduction to Sociology",
+            "course_description": "3 credits"
+          },
+          {
+            "course_name": "8 Communication Electives",
+            "course_description": "24 credits – at least seven courses (21 credits) must be 300/400 level."
+          }
+        ]
+      },
+      {
+        "module_name": "Required Modules for Sociology",
+        "course_modules": [
+          {
+            "course_name": "SOC 101 Introduction to Sociology",
+            "course_description": "3 credits"
+          },
+          {
+            "course_name": "SOC 293 Social Research Methods",
+            "course_description": "3 credits"
+          },
+          {
+            "course_name": "SOC 294 Basic Statistics for Social Sciences",
+            "course_description": "4 credits"
+          },
+          {
+            "course_name": "SOC 349 Classical Sociological Theory",
+            "course_description": "3 credits"
+          },
+          {
+            "course_name": "8 Sociology Electives",
+            "course_description": "24 credits – at least seven courses (21 credits) must be 300/400 level."
+          }
+        ]
+      },
+      {
+        "module_name": "UB Curriculum",
+        "course_modules": [
+          {
+            "course_name": "UB Seminar",
+            "course_description": "3 credits"
+          },
+          {
+            "course_name": "Foundations",
+            "course_description": "21 credits"
+          },
+          {
+            "course_name": "Pathways",
+            "course_description": "18 – 19 credits"
+          },
+          {
+            "course_name": "UBC 399 UB Curriculum Capstone",
+            "course_description": "1 credit"
+          }
+        ]
+      },
+      {
+        "module_name": "Free Electives",
+        "course_modules": [
+          {
+            "course_name": "Free Electives",
+            "course_description": "0 – 4 credits"
+          }
+        ]
+      }
+    ]
+  }
+]
