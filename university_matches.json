@@ -1,0 +1,79 @@
+[
+    {
+        "original_university": "Grenoble Ecole de Management",
+        "matched_university": null,
+        "qs_rank": null,
+        "matching_score": null,
+        "notes": null
+    },
+    {
+        "original_university": "Monash College",
+        "matched_university": null,
+        "qs_rank": null,
+        "matching_score": null,
+        "notes": null
+    },
+    {
+        "original_university": "RMIT University",
+        "matched_university": "RMIT University",
+        "qs_rank": 123,
+        "matching_score": 1.0,
+        "notes": null
+    },
+    {
+        "original_university": "SIM Global Education",
+        "matched_university": null,
+        "qs_rank": null,
+        "matching_score": null,
+        "notes": null
+    },
+    {
+        "original_university": "The University of Sydney",
+        "matched_university": "The University of Sydney",
+        "qs_rank": 18,
+        "matching_score": 1.0,
+        "notes": null
+    },
+    {
+        "original_university": "University at Buffalo",
+        "matched_university": "University at Buffalo SUNY",
+        "qs_rank": 466,
+        "matching_score": 0.8936,
+        "notes": null
+    },
+    {
+        "original_university": "University of Alberta",
+        "matched_university": "University of Alberta",
+        "qs_rank": 96,
+        "matching_score": 1.0,
+        "notes": null
+    },
+    {
+        "original_university": "University of Birmingham",
+        "matched_university": "University of Birmingham",
+        "qs_rank": 80,
+        "matching_score": 1.0,
+        "notes": null
+    },
+    {
+        "original_university": "University of London",
+        "matched_university": null,
+        "qs_rank": null,
+        "matching_score": null,
+        "notes": "特殊情况：此大学不在QS排名中或需要特殊处理"
+    },
+    {
+        "original_university": "University of Stirling",
+        "matched_university": "University of Stirling",
+        "qs_rank": 452,
+        "matching_score": 1.0,
+        "notes": null
+    },
+    {
+        "original_university": "University of Wollongong",
+        "matched_university": "University of Wollongong",
+        "qs_rank": 167,
+        "matching_score": 1.0,
+        "notes": null
+    }
+]

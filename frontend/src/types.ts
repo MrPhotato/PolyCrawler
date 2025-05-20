@@ -24,6 +24,7 @@ export interface ProgramData {
     domestic: Requirement[];
   };
   course_modules: Module[];
+  warning?: string;
 }
 
 export interface Requirement {

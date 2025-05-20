@@ -1,0 +1,19 @@
+# 爬虫基础依赖
+requests>=2.25.1
+beautifulsoup4>=4.9.3
+pandas>=1.2.3
+
+# 向量嵌入相关依赖
+FlagEmbedding>=0.1.0
+numpy>=1.20.0
+pymongo>=4.0.1
+
+# API服务依赖
+flask>=2.0.1
+flask-cors>=3.0.10
+hypercorn>=0.14.3
+openai>=1.6.0
+python-dotenv>=1.0.0
+
+# 异步处理依赖
+asyncio>=3.4.3 

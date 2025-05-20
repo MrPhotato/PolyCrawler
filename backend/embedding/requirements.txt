@@ -1,0 +1,18 @@
+# 向量嵌入相关依赖
+FlagEmbedding>=0.1.0
+numpy>=1.20.0
+pymongo>=4.0.1
+
+# API服务依赖
+flask>=2.0.1
+flask-cors>=3.0.10
+
+# 异步处理
+hypercorn>=0.14.0
+asyncio>=3.4.3
+
+# LLM依赖
+openai>=1.0.0
+
+# 工具依赖
+python-dotenv>=0.19.0 
